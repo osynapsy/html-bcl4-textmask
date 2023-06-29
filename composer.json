@@ -1,0 +1,25 @@
+{
+    "name": "osynapsy/textmask",
+    "version": "1.0",
+    "homepage": "http://www.osynapsy.net/html-bcl4-textmask",
+    "type": "library",
+    "description": "Osynapsy TextMask component",
+    "keywords": ["Osynapsy", "TextMask component"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pietro Celeste",
+            "email": "p.celeste@osynapsy.net",
+            "homepage": "https://github.com/osynapsy/html-bcl4-textmask/wiki"
+        }
+    ],
+    "require": {
+        "php" : ">=7.2.0",
+        "osynapsy/osynapsy-bcl4" : "1.*"
+    },
+    "autoload" : {
+        "psr-4": {
+            "Osynapsy\\Bcl4\\TextMask\\": "src/"
+        }
+    }
+}
