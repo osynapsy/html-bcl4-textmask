@@ -93,11 +93,11 @@ class TextMask extends TextBox
         ]
     ];
 
-    public function __construct($name, $class = '')
+    public function __construct($id)
     {
-        parent::__construct($name, $class);
+        parent::__construct($id, 'bcl4-textmask');
         $this->requireJs('lib/inputmask-5.0.0-beta/dist/jquery.inputmask.js');
-        $this->requireScript("$(':input').inputmask();");
+        $this->requireScript("$('input.bcl4-textmask').inputmask();");
     }
 
     public function setMask($id)
@@ -115,6 +115,6 @@ class TextMask extends TextBox
         );
         $this->attribute('data-inputmask', implode(', ', $rules));
         return $this;
-    }   
+    }
 }
 
