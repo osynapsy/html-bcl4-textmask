@@ -17,6 +17,7 @@ class TextMask extends TextBox
 {
     const MASK_INT = 1;
     const MASK_FLOAT = 2;
+    const MASK_REAL = 3;
     const MASK_CURRENCY = 10;
     const MASK_CURRENCY_EURO = 11;
     const MASK_DATETIME = 20;
@@ -41,6 +42,13 @@ class TextMask extends TextBox
             'autoGroup'=> 1,
             'digits' => 2,
             'digitsOptional' => 2,
+            'placeholder' => '0'
+        ],
+        self::MASK_REAL  => [
+            'alias' => 'numeric',
+            'autoGroup'=> 1,
+            'digits' => 5,
+            'digitsOptional' => 5,
             'placeholder' => '0'
         ],
         //convert boolean value true = 1 and false = 0
