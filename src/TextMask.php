@@ -15,6 +15,8 @@ use Osynapsy\Bcl4\TextBox;
 
 class TextMask extends TextBox
 {
+    const EV_BLUR = 'blur-execute';
+
     const MASK_INT = 1;
     const MASK_FLOAT = 2;
     const MASK_REAL = 3;
@@ -123,6 +125,12 @@ class TextMask extends TextBox
         );
         $this->attribute('data-inputmask', implode(', ', $rules));
         return $this;
+    }
+
+    public function setAction($action, array $parameters = [], $confirmMessage = null, $class = self::EV_BLUR)
+    {
+        $this->attribute('onblur', 'Osynapsy.action.execute(this)');
+        return parent::setAction($action, $parameters, $confirmMessage, $class);
     }
 }
 
