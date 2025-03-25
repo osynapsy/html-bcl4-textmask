@@ -127,9 +127,9 @@ class TextMask extends TextBox
         return $this;
     }
 
-    public function setAction($action, array $parameters = [], $confirmMessage = null, $class = self::EV_BLUR)
+    public function setAction($action, array $parameters = [], $confirmMessage = null, $class = self::EV_CHANGE)
     {
-        $this->attribute('onblur', 'Osynapsy.action.execute(this)');
+        $this->attribute('onchange', 'Osynapsy.action.execute(this)');
         return parent::setAction($action, $parameters, $confirmMessage, $class);
     }
 }
